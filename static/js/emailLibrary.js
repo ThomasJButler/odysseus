@@ -378,7 +378,7 @@ function _measureEmailDocumentSplit(modal) {
       docPane.style.setProperty('bottom', '0px', 'important');
       docPane.style.setProperty('width', 'auto', 'important');
       docPane.style.setProperty('max-width', 'none', 'important');
-      docPane.style.setProperty('height', '100vh', 'important');
+      docPane.style.setProperty('height', 'var(--app-vh, 100vh)', 'important');
       docPane.style.setProperty('z-index', '260', 'important');
     }
   } catch (_) {}
@@ -452,8 +452,8 @@ function _prepareEmailWindowForDocument(modal) {
       content.style.bottom = '0';
       content.style.width = Math.round(rect?.width || 440) + 'px';
       content.style.maxWidth = Math.round(rect?.width || 440) + 'px';
-      content.style.height = '100vh';
-      content.style.maxHeight = '100vh';
+      content.style.height = 'var(--app-vh, 100vh)';
+      content.style.maxHeight = 'var(--app-vh, 100vh)';
       content.style.borderRadius = '0';
       content.style.transform = 'none';
       content.style.margin = '0';
@@ -1359,10 +1359,10 @@ function _makeDraggable(content, modal, fsClass) {
     content.style.top = '0';
     content.style.right = '0';
     content.style.bottom = '0';
-    content.style.width = '100vw';
-    content.style.maxWidth = '100vw';
-    content.style.height = '100vh';
-    content.style.maxHeight = '100vh';
+    content.style.width = 'var(--app-vw, 100vw)';
+    content.style.maxWidth = 'var(--app-vw, 100vw)';
+    content.style.height = 'var(--app-vh, 100vh)';
+    content.style.maxHeight = 'var(--app-vh, 100vh)';
     content.style.borderRadius = '0';
     content.style.transform = 'none';
   };
@@ -1435,8 +1435,8 @@ function _snapEmailModalToLeftSidebar(modal) {
   content.style.bottom = '0';
   content.style.width = W + 'px';
   content.style.maxWidth = W + 'px';
-  content.style.height = '100vh';
-  content.style.maxHeight = '100vh';
+  content.style.height = 'var(--app-vh, 100vh)';
+  content.style.maxHeight = 'var(--app-vh, 100vh)';
   content.style.borderRadius = '0';
   content.style.transform = 'none';
   content.style.margin = '0';
